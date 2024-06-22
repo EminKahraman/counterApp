@@ -15,9 +15,6 @@ function Counter() {
         alignItems:'center',
         color:'white',
         border:'none',
-        height:40,
-        width:100,
-        cursor:'pointer'
     }
     return (
         <div>
