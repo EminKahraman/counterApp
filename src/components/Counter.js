@@ -8,6 +8,8 @@ function Counter() {
     const countValue = useSelector((state) => state.counter.value);
     const dispatch = useDispatch();
 
+    // change code
+
 
     const buttonStyle = { 
         backgroundColor:'red',
