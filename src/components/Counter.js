@@ -8,13 +8,22 @@ function Counter() {
     const countValue = useSelector((state) => state.counter.value);
     const dispatch = useDispatch();
 
+
+    const buttonStyle = { 
+        backgroundColor:'red',
+        justifyContent:'center',
+        alignItems:'center',
+        color:'white',
+        border:'none',
+        height:40,
+        width:100,
+        cursor:'pointer'
+    }
     return (
         <div>
-            <h1>{countValue}</h1>
-
-            <button onClick={() => dispatch(decrement())}>Decrement</button>
-            <button onClick={() => dispatch(increment())}>Increment</button>
-
+            <h1>{countValue}</h1> 
+            <button style={buttonStyle} onClick={() => dispatch(decrement())}>Decrement</button>
+            <button style={{ ...buttonStyle,  backgroundColor:'green', marginLeft:10 }} onClick={() => dispatch(increment())}>Increment</button>
             <br />
             <br />
         <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)}/>
